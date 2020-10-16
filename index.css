@@ -1,0 +1,45 @@
+body {
+  margin: 5%;
+  font-family: "Gill Sans", "Gill Sans MT";
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  color: #16697a;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.entry-textbox {
+  width: 20em;
+  height: 10em;
+  padding: 1em;
+  border-radius: 25px;
+  border: unset;
+  margin-bottom: 0.5em;
+  background-color: #ffe4c4;
+}
+
+.button {
+  border: unset;
+  border-radius: 15px;
+  position: relative;
+  padding: 5px 15px;
+  margin-bottom: 0.5em;
+}
+
+.entry-textbox:focus {
+  outline: none;
+}
+
+#entries {
+  background: #778899;
+  color: #ede7e3;
+  font-family: cursive;
+  padding: 2em;
+  max-width: 20em;
+  border: unset;
+  border-radius: 25px;
+  margin-top: 1em;
+}
