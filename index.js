@@ -10,20 +10,24 @@ function addEntryToDom(event) {
     event.preventDefault();
     const entryDiv = document.createElement("div");
     entryDiv.className = "single-entry"
-    entryDiv.innerText = entryTextbox.value;
-    entryDiv.style.display = "none";
-    entriesSection.appendChild(entryDiv);
-    entryTextbox.value = "";
+    if (entryTextbox.value) {
+        entryDiv.innerText = entryTextbox.value;
 
-    const displayEntryButton = document.createElement("button");
-    displayEntryButton.className = "display-entry-button";
-    displayEntryButton.innerText = count;
-    entriesNav.appendChild(displayEntryButton);
+        entryDiv.style.display = "none";
+        entriesSection.appendChild(entryDiv);
+        entryTextbox.value = "";
 
-    displayEntryButton.addEventListener("click", function () {
-        entryDiv.style.display = "block"
-    })
-    count++
+        const displayEntryButton = document.createElement("button");
+        displayEntryButton.className = "display-entry-button";
+        displayEntryButton.innerText = count;
+        entriesNav.appendChild(displayEntryButton);
+        count++
+        displayEntryButton.addEventListener("click", function () {
+            entryDiv.style.display = "block"
+
+        })
+    }
+
 }
 
 entryForm.addEventListener("submit", addEntryToDom)
