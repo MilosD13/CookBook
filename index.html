@@ -4,13 +4,21 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1 class="title">My Cook Book</h1>
+    <h1 class="title">My CookBook</h1>
     <form id="entryForm">
-      <textarea
-        class="entry-textbox"
-        placeholder="Click here to start typing..."
-      >
-      </textarea>
+      <p id="emoji-title">Pick an emoji that represents your meal</p>
+      <div id="emoji-pick">
+        <button id="cake" class="meal" type="click">🎂</button>
+        <button class="meal" type="click">🍝</button>
+        <button class="button" type="click">🍣</button>
+        <button class="button" type="click">🍙</button>
+        <button class="button" type="click">🥟</button>
+        <button class="button" type="click">🥩</button>
+        <button class="button" type="click">🍕</button>
+        <button class="button" type="click">🥞</button>
+        <button class="button" type="click">🍖</button>
+      </div>
+      <textarea class="entry-textbox" placeholder="Click here to start typing..."></textarea>
       <br />
       <button class="button" type="submit">Submit</button>
     </form>
