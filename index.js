@@ -5,7 +5,14 @@ const entriesSection = document.getElementById("entries");
 const entryTextbox = document.querySelector(".entry-textbox");
 const entriesNav = document.querySelector('.entries-nav');
 
-let count = 1;
+
+let count = "🍲";
+const cake = document.getElementById("cake").addEventListener("click", function () {
+    event.preventDefault();
+    count = document.getElementById("cake").innerText;
+    document.getElementById("cake").style.backgroundColor = "red"
+
+})
 function addEntryToDom(event) {
     event.preventDefault();
     const entryDiv = document.createElement("div");
@@ -21,10 +28,13 @@ function addEntryToDom(event) {
         displayEntryButton.className = "display-entry-button";
         displayEntryButton.innerText = count;
         entriesNav.appendChild(displayEntryButton);
-        count++
+        /* count++ */
         displayEntryButton.addEventListener("click", function () {
-            entryDiv.style.display = "block"
-
+            const allEntries = document.querySelectorAll(".single-entry")
+            for (let index = 0; index < allEntries.length; index++) {
+                allEntries[index].style.display = "none";
+            }
+            entryDiv.style.display = "block";
         })
     }
 
