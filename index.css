@@ -3,6 +3,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT";
   display: grid;
   justify-content: center;
+  background-color: #e4f4fc;
 }
 
 .title {
@@ -29,7 +30,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-.entry-textbox:focus {
+.entry-textbox, .entry-emoji, .button:focus {
   outline: none;
 }
 
@@ -42,6 +43,14 @@ body {
   border: unset;
   border-radius: 25px;
   margin-top: 1em;
+}
+
+#emoji-title {
+  width: 20em ;
+}
+
+#emoji-pick {
+  width: 20em ;
 }
 
 .display-entry-button {
